@@ -1,0 +1,24 @@
+﻿@model StudentGradeApp.Models.Grade
+
+<h2>Create Grade</h2>
+
+<form asp-action="Create">
+    <div class="mb-3">
+        <label asp-for="StudentId" class="form-label"></label>
+        <select asp-for="StudentId" class="form-select" asp-items="ViewBag.StudentId"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SubjectId" class="form-label"></label>
+        <select asp-for="SubjectId" class="form-select" asp-items="ViewBag.SubjectId"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="GradeValue" class="form-label"></label>
+        <input asp-for="GradeValue" class="form-control" />
+        <span asp-validation-for="GradeValue" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
