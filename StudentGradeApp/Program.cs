@@ -19,5 +19,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 // IMPORTANT: Listen on the PORT environment variable
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-app.Run($"http://0.0.0.0:{port}");
+var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+app.Urls.Add($"http://0.0.0.0:{port}");
