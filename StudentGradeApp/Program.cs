@@ -21,3 +21,5 @@ app.MapControllers();
 // IMPORTANT: Listen on the PORT environment variable
 var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
 app.Urls.Add($"http://0.0.0.0:{port}");
+
+app.Run();
